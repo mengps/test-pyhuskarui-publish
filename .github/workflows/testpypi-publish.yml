@@ -6,8 +6,7 @@ on:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
+    permissions: write-all
 
     steps:
       - uses: actions/checkout@v4
