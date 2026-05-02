@@ -25,9 +25,6 @@ wheels/
 # uv
 uv.lock
 
-# github
-.github/
-
 # pyside
 plugins.qmltypes
 metadata.json
