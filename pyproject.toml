@@ -1,0 +1,30 @@
+[[tool.uv.index]]
+default = true
+url = "https://mirrors.hust.edu.cn/pypi/web/simple/"
+
+[tool.uv.workspace]
+members = ["pyhuskarui", "utils", "gallery"]
+
+[tool.uv.sources]
+gallery = { workspace = true }
+pyhuskarui = { workspace = true }
+utils = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.9",
+    "utils",
+]
+
+[tool.ruff]
+line-length = 120
+extend-exclude = [
+    "qrcodegen.py",
+]
+
+[tool.ruff.lint]
+# E501: line too long
+extend-select = ["E501"]
+# F401: imported but unused
+# F403: from module import *
+extend-ignore = ["F401", "F403"]

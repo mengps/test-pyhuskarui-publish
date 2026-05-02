@@ -1,0 +1,17 @@
+[project]
+authors = [{ name = "MenPenS", email = "843261040@qq.com" }]
+dependencies = ["loguru", "mypy", "nuitka"]
+description = "Add your description here"
+name = "utils"
+requires-python = ">=3.9"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project.scripts]
+init = "utils:init"
+package = "utils:package"
+gendocs = "utils:gen_docs"
+format = "utils:format_code"

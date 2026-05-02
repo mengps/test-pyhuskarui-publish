@@ -1,0 +1,36 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+*.pypirc
+*.python-version
+*.pyi
+
+# Qt rc/qsb
+*_rc.py
+*.qsb
+
+# Virtual environments
+.venv
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# uv
+uv.lock
+
+# github
+.github/
+
+# pyside
+plugins.qmltypes
+metadata.json
+
+# nuitka
+package/
