@@ -15,7 +15,6 @@ jobs:
         uses: astral-sh/setup-uv@v5
 
       - name: Build package
-        working-directory: pyhuskarui
         run: |
           uv sync
           uv run init
