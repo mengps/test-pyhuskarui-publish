@@ -29,12 +29,13 @@ include = ["pyhuskarui*"]
 where = ["src"]
 
 [tool.setuptools.package-data]
-huskarui = [
-  "imports/**/*",
+"pyhuskarui" = [
+  "*.qrc",
+  "qml/**/*.qml",
+  "qml/**/qmldir",
+  "qml/**/*.metainfo",
   "resources/**/*",
-  "controls/**/*",
-  "themes/**/*",
-  "utils/**/*",
+  "shaders/**/*",
 ]
 
 [tool.setuptools.dynamic]
