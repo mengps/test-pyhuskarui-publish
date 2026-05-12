@@ -23,6 +23,7 @@ jobs:
         run: |
           uv sync
           uv run init
+          cp README.md pyhuskarui/README.md
           uv build pyhuskarui
 
       - name: Publish to Test PyPI
