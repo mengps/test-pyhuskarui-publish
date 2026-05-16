@@ -18,7 +18,7 @@ jobs:
         run: |
           uv sync
           uv run init
-          rm -r -fo dist
+          rm -r -fo dist -EA 0
           uv build pyhuskarui
 
       - name: Publish to Test PyPI
