@@ -9,11 +9,7 @@
 
 ![win-badge] ![linux-badge] ![macos-badge] ![android-badge]
 
-[![Issues][issues-open-image]][issues-open-url] [![Issues][issues-close-image]][issues-close-url] [![Release][release-image]][release-url]
-
 [![QQGroup][qqgroup-image]][qqgroup-url]
-
-English | [中文](./README-zh_CN.md)
 
 </div>
 
@@ -21,14 +17,6 @@ English | [中文](./README-zh_CN.md)
 [linux-badge]: https://img.shields.io/badge/Linux-passing-brightgreen?style=flat-square
 [macos-badge]: https://img.shields.io/badge/MacOS-passing-brightgreen?style=flat-square
 [android-badge]: https://img.shields.io/badge/Android-passing-brightgreen?style=flat-square
-
-[issues-open-image]: https://img.shields.io/github/issues/mengps/PyHuskarUI?label=Issue&style=flat-square
-[issues-open-url]: https://github.com/mengps/PyHuskarUI/issues
-[issues-close-image]: https://img.shields.io/github/issues-closed/mengps/PyHuskarUI?color=brightgreen&label=Issue&style=flat-square
-[issues-close-url]: https://github.com/mengps/PyHuskarUI/issues?q=is%3Aissue%20state%3Aclosed
-
-[release-image]: https://img.shields.io/github/v/release/mengps/PyHuskarUI?label=Release&style=flat-square
-[release-url]: https://github.com/mengps/PyHuskarUI/releases
 
 [qqgroup-image]: https://img.shields.io/badge/QQGroup-490328047-f74658?style=flat-square
 [qqgroup-url]: https://qm.qq.com/q/cMNHn2tWeY
@@ -71,11 +59,11 @@ Anyone can discuss through issues, QQ groups, or WeChat groups, and ultimately m
 > - Obtain scenario based development examples
 > - Automatically iterate and preview code
 
-👉 See [AI Agent Skill Guide](./agent/README.md) for more details.
+👉 See [AI Agent Skill Guide](https://github.com/mengps/PyHuskarUI/tree/master/agent/README.md) for more details.
 
 ## 🔖 Online Document
 
-- [Component Document](./docs/index.md)
+- [Component Document](https://github.com/mengps/PyHuskarUI/tree/master/docs/index.md)
 
 ## 🌐 Online wiki
 - [PyHuskarUI Online wiki (AI)](https://deepwiki.com/mengps/PyHuskarUI)
@@ -90,43 +78,23 @@ Precompiled packages and binary libraries for two platforms, `Windows / MacOS / 
 
 Please visit [Release](https://github.com/mengps/PyHuskarUI/releases) to download.
 
-## 🔨 How to Build
-
-- Clone
-```auto
-git clone --recursive https://github.com/mengps/PyHuskarUI.git
-```
-- Build
-```auto
-uv sync
-uv run init
-uv build pyhuskarui
-```
-- Install
-  - use pypi package
-  ```auto
-  uv pip install pyhuskarui
-  ```
-  - use source code
-  ```auto
-  uv pip install [-e] ./pyhuskarui
-  ```
-- Run Gallery
-```auto
-uv run ./gallery/main.py
-```
-
 ## 📦 Get started 
 
+ - Install the library
+ ```auto
+   uv pip install pyhuskarui
+ ```
  - Create QtQuick application `QtVersion >= 6.8`
  - Add the following code to your `main.py`
  ```python
  ...
+ from pyhuskarui.husapp import HusApp
+ 
  if __name__ == "__main__":
      ...
      app = QGuiApplication(sys.argv)
      engine = QQmlApplicationEngine()
-     engine.singletonInstance("HuskarUI.Basic", "HusApp")
+     HusApp.initialize(engine)
      ...
  ```
 - Add the following code to your `Main.qml`
