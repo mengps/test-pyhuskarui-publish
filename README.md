@@ -122,11 +122,13 @@ uv run ./gallery/main.py
  - Add the following code to your `main.py`
  ```python
  ...
+ from pyhuskarui.husapp import HusApp
+ 
  if __name__ == "__main__":
      ...
      app = QGuiApplication(sys.argv)
      engine = QQmlApplicationEngine()
-     engine.singletonInstance("HuskarUI.Basic", "HusApp")
+     HusApp.initialize(engine)
      ...
  ```
 - Add the following code to your `Main.qml`

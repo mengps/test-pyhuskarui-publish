@@ -124,17 +124,19 @@ uv run ./gallery/main.py
  - 添加下面的代码到您的 `main.py` 中
  ```python
  ...
+ from pyhuskarui.husapp import HusApp
+ 
  if __name__ == "__main__":
      ...
      app = QGuiApplication(sys.argv)
      engine = QQmlApplicationEngine()
-     engine.singletonInstance("HuskarUI.Basic", "HusApp")
+     HusApp.initialize(engine)
      ...
- ```.
  ```
  - 添加下面的代码到您的 `Main.qml` 中
  ```qml
   import HuskarUI.Basic
+  
   HusWindow { 
     ...
   }

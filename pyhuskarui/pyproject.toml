@@ -29,6 +29,7 @@ path = "src/pyhuskarui/__init__.py"
 [tool.hatch.build]
 artifacts = [
   "src/pyhuskarui/*_rc.py",
+  "src/pyhuskarui/*.pyi",
   "src/pyhuskarui/shaders/**/*.qsb",
 ]
 
